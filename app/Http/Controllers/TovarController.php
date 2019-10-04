@@ -8,28 +8,8 @@ use App\Services\TovarSerivces;
 use Illuminate\Http\Request;
 
 
-/**
- * @SWG\Swagger(
- *   basePath="/api",
- *   @SWG\Info(
- *     title="Core API",
- *     version="1.0.0"
- *   )
- * )
- */
 class TovarController extends Controller
 {
-    /**
-     * @SWG\Get(
-     *   path="/sample",
-     *   summary="Sample",
-     *   @SWG\Response(response=200, description="successful operation")
-     * )
-     *
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index(TovarSerivces $services)
     {
         $datas=$services->select();
